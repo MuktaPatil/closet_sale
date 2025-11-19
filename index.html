@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Sale - Pre-loved Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Curated Chaos</h1>
+        <p>Pre-loved items at student-friendly prices</p>
+        <a href="https://wa.me/+13159522613?text=Hi!%20I'm%20interested%20in%20buying%20from%20your%20sale" class="whatsapp-btn" target="_blank">
+            💬 Message on WhatsApp
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" data-category="all">All Items</button>
+            <button class="filter-btn" data-category="women">Women's Clothes</button>
+            <button class="filter-btn" data-category="men">Men's Clothes</button>
+            <button class="filter-btn" data-category="books">Books</button>
+            <button class="filter-btn" data-category="misc">Miscellaneous</button>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+            <!-- Example Product 1 -->
+            <div class="product-card" data-category="women">
+                <div class="product-image" style="background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);"></div>
+                <div class="product-info">
+                    <span class="product-category">Women's Clothes</span>
+                    <div class="product-name">Floral Summer Dress</div>
+                    <div class="product-details">Size: M | Brand: Zara</div>
+                    <div class="product-price">₹450</div>
+                    <div class="product-condition">Condition: Like New</div>
+                </div>
+            </div>
+
+            <!-- Example Product 2 -->
+            <div class="product-card" data-category="men">
+                <div class="product-image" style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);"></div>
+                <div class="product-info">
+                    <span class="product-category">Men's Clothes</span>
+                    <div class="product-name">Denim Jacket</div>
+                    <div class="product-details">Size: L | Brand: Levi's</div>
+                    <div class="product-price">₹800</div>
+                    <div class="product-condition">Condition: Good</div>
+                </div>
+            </div>
+
+            <!-- Example Product 3 -->
+            <div class="product-card" data-category="women">
+                <div class="product-image" style="background: linear-gradient(135deg, #fab1a0 0%, #ff7675 100%);"></div>
+                <div class="product-info">
+                    <span class="product-category">Women's Clothes</span>
+                    <div class="product-name">Casual T-Shirt</div>
+                    <div class="product-details">Size: S | Brand: H&M</div>
+                    <div class="product-price">₹200</div>
+                    <div class="product-condition">Condition: Good</div>
+                </div>
+            </div>
+
+            <!-- Example Product 4 -->
+            <div class="product-card" data-category="books">
+                <div class="product-image" style="background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);"></div>
+                <div class="product-info">
+                    <span class="product-category">Books</span>
+                    <div class="product-name">Data Science Textbook</div>
+                    <div class="product-details">Author: Various | Edition: 3rd</div>
+                    <div class="product-price">₹350</div>
+                    <div class="product-condition">Condition: Good</div>
+                </div>
+            </div>
+
+            <!-- Example Product 5 -->
+            <div class="product-card" data-category="men">
+                <div class="product-image" style="background: linear-gradient(135deg, #55efc4 0%, #00b894 100%);"></div>
+                <div class="product-info">
+                    <span class="product-category">Men's Clothes</span>
+                    <div class="product-name">Cotton Shirt</div>
+                    <div class="product-details">Size: M | Brand: Arrow</div>
+                    <div class="product-price">₹400</div>
+                    <div class="product-condition">Condition: Like New</div>
+                </div>
+            </div>
+
+            <!-- Example Product 6 -->
+            <div class="product-card" data-category="misc">
+                <div class="product-image" style="background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);"></div>
+                <div class="product-info">
+                    <span class="product-category">Miscellaneous</span>
+                    <div class="product-name">Backpack</div>
+                    <div class="product-details">Color: Black | Brand: Wildcraft</div>
+                    <div class="product-price">₹600</div>
+                    <div class="product-condition">Condition: Good</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>💌 All items are pre-loved and priced for fellow students</p>
+        <p>Message me on WhatsApp to purchase or ask questions!</p>
+    </div>
+
+    <script>
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        const productsGrid = document.getElementById('productsGrid');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const category = btn.getAttribute('data-category');
+
+                // Filter products
+                let visibleCount = 0;
+                productCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Show empty state if no products
+                const existingEmptyState = document.querySelector('.empty-state');
+                if (visibleCount === 0 && !existingEmptyState) {
+                    const emptyState = document.createElement('div');
+                    emptyState.className = 'empty-state';
+                    emptyState.innerHTML = '<h3>No items yet</h3><p>Check back soon for new items!</p>';
+                    productsGrid.appendChild(emptyState);
+                } else if (visibleCount > 0 && existingEmptyState) {
+                    existingEmptyState.remove();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
