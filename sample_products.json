@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Floral Summer Dress",
+    "category": "women",
+    "images": ["dress1_front.jpg", "dress1_back.jpg", "dress1_styled.jpg"],
+    "size": "M",
+    "brand": "Zara",
+    "price": 450,
+    "condition": "Like New",
+    "description": "Beautiful floral print, perfect for summer"
+  },
+  {
+    "name": "Denim Jacket",
+    "category": "men",
+    "images": ["jacket1_front.jpg", "jacket1_back.jpg"],
+    "size": "L",
+    "brand": "Levi's",
+    "price": 800,
+    "condition": "Good",
+    "description": "Classic denim jacket"
+  },
+  {
+    "name": "Casual T-Shirt",
+    "category": "women",
+    "images": ["tshirt1_front.jpg"],
+    "size": "S",
+    "brand": "H&M",
+    "price": 200,
+    "condition": "Good",
+    "description": "Comfortable cotton t-shirt"
+  },
+  {
+    "name": "Data Science Textbook",
+    "category": "books",
+    "images": ["book1_cover.jpg"],
+    "author": "Various",
+    "price": 350,
+    "condition": "Good",
+    "description": "3rd Edition, minimal highlighting"
+  },
+  {
+    "name": "Cotton Shirt",
+    "category": "men",
+    "images": ["shirt1_front.jpg", "shirt1_back.jpg"],
+    "size": "M",
+    "brand": "Arrow",
+    "price": 400,
+    "condition": "Like New",
+    "description": "Formal cotton shirt"
+  },
+  {
+    "name": "Backpack",
+    "category": "misc",
+    "images": ["backpack1_front.jpg", "backpack1_side.jpg"],
+    "brand": "Wildcraft",
+    "price": 600,
+    "condition": "Good",
+    "description": "25L capacity, perfect for college"
+  }
+]

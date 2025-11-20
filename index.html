@@ -3,145 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Sale - Pre-loved Fashion</title>
+    <title>Curated Chaos - Move Out Sale</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <div class="header">
-        <h1>Curated Chaos</h1>
-        <p>Pre-loved items at student-friendly prices</p>
-        <a href="https://wa.me/+13159522613?text=Hi!%20I'm%20interested%20in%20buying%20from%20your%20sale" class="whatsapp-btn" target="_blank">
-            💬 Message on WhatsApp
-        </a>
+        <div class="logo">Curated Chaos</div>
+        <nav class="nav">
+            <a href="#products" class="nav-link">Browse</a>
+            <a href="#how-to-order" class="nav-link">How to Order</a>
+        </nav>
     </div>
 
-    <div class="container">
-        <div class="filters">
-            <button class="filter-btn active" data-category="all">All Items</button>
-            <button class="filter-btn" data-category="women">Women's Clothes</button>
-            <button class="filter-btn" data-category="men">Men's Clothes</button>
-            <button class="filter-btn" data-category="books">Books</button>
-            <button class="filter-btn" data-category="misc">Miscellaneous</button>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>MOVE OUT SALE</h1>
+            <p class="hero-description">
+                For more details on the pieces and to order, send me a screenshot of the item on WhatsApp. 
+                Available for pickup in Syracuse!
+            </p>
+            <a href="https://wa.me/1234567890?text=Hi!%20I'm%20interested%20in%20something%20from%20your%20sale" 
+               class="whatsapp-btn" target="_blank">
+               💬 Contact on WhatsApp
+            </a>
         </div>
-
-        <div class="products-grid" id="productsGrid">
-            <!-- Example Product 1 -->
-            <div class="product-card" data-category="women">
-                <div class="product-image" style="background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);"></div>
-                <div class="product-info">
-                    <span class="product-category">Women's Clothes</span>
-                    <div class="product-name">Floral Summer Dress</div>
-                    <div class="product-details">Size: M | Brand: Zara</div>
-                    <div class="product-price">₹450</div>
-                    <div class="product-condition">Condition: Like New</div>
-                </div>
-            </div>
-
-            <!-- Example Product 2 -->
-            <div class="product-card" data-category="men">
-                <div class="product-image" style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);"></div>
-                <div class="product-info">
-                    <span class="product-category">Men's Clothes</span>
-                    <div class="product-name">Denim Jacket</div>
-                    <div class="product-details">Size: L | Brand: Levi's</div>
-                    <div class="product-price">₹800</div>
-                    <div class="product-condition">Condition: Good</div>
-                </div>
-            </div>
-
-            <!-- Example Product 3 -->
-            <div class="product-card" data-category="women">
-                <div class="product-image" style="background: linear-gradient(135deg, #fab1a0 0%, #ff7675 100%);"></div>
-                <div class="product-info">
-                    <span class="product-category">Women's Clothes</span>
-                    <div class="product-name">Casual T-Shirt</div>
-                    <div class="product-details">Size: S | Brand: H&M</div>
-                    <div class="product-price">₹200</div>
-                    <div class="product-condition">Condition: Good</div>
-                </div>
-            </div>
-
-            <!-- Example Product 4 -->
-            <div class="product-card" data-category="books">
-                <div class="product-image" style="background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);"></div>
-                <div class="product-info">
-                    <span class="product-category">Books</span>
-                    <div class="product-name">Data Science Textbook</div>
-                    <div class="product-details">Author: Various | Edition: 3rd</div>
-                    <div class="product-price">₹350</div>
-                    <div class="product-condition">Condition: Good</div>
-                </div>
-            </div>
-
-            <!-- Example Product 5 -->
-            <div class="product-card" data-category="men">
-                <div class="product-image" style="background: linear-gradient(135deg, #55efc4 0%, #00b894 100%);"></div>
-                <div class="product-info">
-                    <span class="product-category">Men's Clothes</span>
-                    <div class="product-name">Cotton Shirt</div>
-                    <div class="product-details">Size: M | Brand: Arrow</div>
-                    <div class="product-price">₹400</div>
-                    <div class="product-condition">Condition: Like New</div>
-                </div>
-            </div>
-
-            <!-- Example Product 6 -->
-            <div class="product-card" data-category="misc">
-                <div class="product-image" style="background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);"></div>
-                <div class="product-info">
-                    <span class="product-category">Miscellaneous</span>
-                    <div class="product-name">Backpack</div>
-                    <div class="product-details">Color: Black | Brand: Wildcraft</div>
-                    <div class="product-price">₹600</div>
-                    <div class="product-condition">Condition: Good</div>
-                </div>
-            </div>
+        <div class="hero-image">
+            <!-- Add your image here later -->
+            <span>Your image goes here</span>
         </div>
     </div>
 
-    <div class="footer">
-        <p>💌 All items are pre-loved and priced for fellow students</p>
-        <p>Message me on WhatsApp to purchase or ask questions!</p>
+    <!-- Products Section -->
+    <div class="container" id="products">
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab active" data-category="all">All Items</button>
+                <button class="tab" data-category="women">Women's</button>
+                <button class="tab" data-category="men">Men's</button>
+                <button class="tab" data-category="books">Books</button>
+                <button class="tab" data-category="misc">Misc</button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">Loading products...</div>
+        <div class="products-grid" id="productsGrid"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer" id="how-to-order">
+        <p><strong>HOW TO ORDER:</strong> Screenshot the item you want and send it to me on WhatsApp!</p>
+        <p>Available for pickup in Syracuse • First come, first served</p>
     </div>
 
     <script>
-        // Filter functionality
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const productCards = document.querySelectorAll('.product-card');
-        const productsGrid = document.getElementById('productsGrid');
+        let products = [];
+        let currentCategory = 'all';
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
-                btn.classList.add('active');
+        // Load products from JSON
+        async function loadProducts() {
+            try {
+                const response = await fetch('products.json');
+                products = await response.json();
+                document.getElementById('loading').style.display = 'none';
+                renderProducts();
+            } catch (error) {
+                console.error('Error loading products:', error);
+                document.getElementById('loading').innerHTML = 
+                    '<h3>Could not load products</h3><p>Make sure products.json exists in the same folder!</p>';
+            }
+        }
 
-                const category = btn.getAttribute('data-category');
+        // Create product card HTML
+        function createProductCard(product, index) {
+            const images = Array.isArray(product.images) ? product.images : [product.images];
+            const imagesHTML = images.map(img => 
+                `<img src="images/${img}" alt="${product.name}" class="carousel-image" onerror="this.src='https://via.placeholder.com/300x300?text=Image+Not+Found'">`
+            ).join('');
 
-                // Filter products
-                let visibleCount = 0;
-                productCards.forEach(card => {
-                    if (category === 'all' || card.getAttribute('data-category') === category) {
-                        card.style.display = 'block';
-                        visibleCount++;
-                    } else {
-                        card.style.display = 'none';
-                    }
+            const dotsHTML = images.length > 1 ? images.map((_, i) => 
+                `<span class="carousel-dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>`
+            ).join('') : '';
+
+            const navHTML = images.length > 1 ? `
+                <button class="carousel-nav prev" onclick="changeImage(event, ${index}, -1)">‹</button>
+                <button class="carousel-nav next" onclick="changeImage(event, ${index}, 1)">›</button>
+                <div class="carousel-dots">${dotsHTML}</div>
+            ` : '';
+
+            return `
+                <div class="product-card" data-category="${product.category}">
+                    <div class="carousel-container">
+                        <div class="carousel-images" data-current="0">
+                            ${imagesHTML}
+                        </div>
+                        ${navHTML}
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">${formatCategory(product.category)}</span>
+                        <div class="product-name">${product.name}</div>
+                        <div class="product-details">${formatDetails(product)}</div>
+                        <div class="product-price">$${product.price}</div>
+                        <div class="product-condition">${product.condition}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Format category for display
+        function formatCategory(category) {
+            const categories = {
+                'women': "Women's",
+                'men': "Men's",
+                'books': 'Books',
+                'misc': 'Misc'
+            };
+            return categories[category] || category;
+        }
+
+        // Format product details
+        function formatDetails(product) {
+            const details = [];
+            if (product.size) details.push(`Size: ${product.size}`);
+            if (product.brand) details.push(`${product.brand}`);
+            if (product.author) details.push(`by ${product.author}`);
+            return details.join(' • ') || 'Ask for details';
+        }
+
+        // Render products
+        function renderProducts() {
+            const grid = document.getElementById('productsGrid');
+            const filteredProducts = currentCategory === 'all' 
+                ? products 
+                : products.filter(p => p.category === currentCategory);
+
+            if (filteredProducts.length === 0) {
+                grid.innerHTML = '<div class="empty-state"><h3>No items yet</h3><p>Check back soon!</p></div>';
+                return;
+            }
+
+            grid.innerHTML = filteredProducts.map((product, index) => 
+                createProductCard(product, index)
+            ).join('');
+
+            // Add dot click handlers
+            document.querySelectorAll('.carousel-dot').forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const container = e.target.closest('.carousel-container');
+                    const images = container.querySelector('.carousel-images');
+                    const index = parseInt(e.target.dataset.index);
+                    updateCarousel(container, images, index);
                 });
+            });
+        }
 
-                // Show empty state if no products
-                const existingEmptyState = document.querySelector('.empty-state');
-                if (visibleCount === 0 && !existingEmptyState) {
-                    const emptyState = document.createElement('div');
-                    emptyState.className = 'empty-state';
-                    emptyState.innerHTML = '<h3>No items yet</h3><p>Check back soon for new items!</p>';
-                    productsGrid.appendChild(emptyState);
-                } else if (visibleCount > 0 && existingEmptyState) {
-                    existingEmptyState.remove();
-                }
+        // Change carousel image
+        function changeImage(event, productIndex, direction) {
+            event.stopPropagation();
+            const container = event.target.closest('.carousel-container');
+            const images = container.querySelector('.carousel-images');
+            const currentIndex = parseInt(images.dataset.current);
+            const totalImages = images.children.length;
+            
+            let newIndex = currentIndex + direction;
+            if (newIndex < 0) newIndex = totalImages - 1;
+            if (newIndex >= totalImages) newIndex = 0;
+            
+            updateCarousel(container, images, newIndex);
+        }
+
+        // Update carousel display
+        function updateCarousel(container, images, newIndex) {
+            images.dataset.current = newIndex;
+            images.style.transform = `translateX(-${newIndex * 100}%)`;
+            
+            // Update dots
+            const dots = container.querySelectorAll('.carousel-dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === newIndex);
+            });
+        }
+
+        // Tab functionality
+        document.querySelectorAll('.tab').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentCategory = btn.dataset.category;
+                renderProducts();
             });
         });
+
+        // Load products on page load
+        loadProducts();
     </script>
 </body>
 </html>

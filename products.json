@@ -1,0 +1,85 @@
+[
+  {
+    "name": "Pepe Jeans Blue Shirt",
+    "category": "men",
+    "images": [
+      "pepe_jeans_blue_shirt.jpg"
+    ],
+    "price": 10,
+    "condition": "Never Used",
+    "brand": "Pepe Jeans",
+    "description": "Selling because it no longer fits. 100% cotton. Extra button included. details on the button. Fresh print"
+  },
+  {
+    "name": "Dockers Blue Loungewear",
+    "category": "men",
+    "images": [
+      "Dockers_blue_loungewear.jpg"
+    ],
+    "price": 15,
+    "condition": "Like New",
+    "size": "36-38",
+    "brand": "Dockers",
+    "description": "Selling because it no longer fits. Thick. Good for winter"
+  },
+  {
+    "name": "Grey Sweatpants",
+    "category": "men",
+    "images": [
+      "Cotton_Blend_Joggers.jpg"
+    ],
+    "price": 5,
+    "condition": "Never Used",
+    "size": "XXL",
+    "description": "Cotton and Polyester Blend"
+  },
+  {
+    "name": "Red Tape Polo",
+    "category": "men",
+    "images": [
+      "red_tape1.jpg",
+      "red_tape2.jpg",
+      "red_tape_tag.jpg"
+    ],
+    "price": 35,
+    "condition": "New with tag",
+    "size": "XXL",
+    "brand": "Red Tape",
+    "description": "Selling because it no longer fits"
+  },
+  {
+    "name": "Nike Original",
+    "category": "men",
+    "images": [
+      "Nike_original.jpg"
+    ],
+    "price": 8,
+    "condition": "Never Used",
+    "size": "XXL",
+    "brand": "Nike",
+    "description": "Basic Workout Tee. Color: Dark Blue. Thick Material, Original Nike Air with iridescent print"
+  },
+  {
+    "name": "Zudio Grey Jeans",
+    "category": "men",
+    "images": [
+      "Zudio Grey jeans.jpg"
+    ],
+    "price": 10,
+    "condition": "Lightly Used",
+    "size": "38/XXL",
+    "brand": "Zudio",
+    "description": "Zudio Dallas, Carrot Fit, Color: grey"
+  },
+  {
+    "name": "Workout Tee",
+    "category": "men",
+    "images": [
+      "Workout Tee.jpg"
+    ],
+    "price": 5,
+    "condition": "Rarely Used",
+    "size": "L",
+    "description": "Basic Workout Tee. Color: Light Blue. Material Polyester"
+  }
+]
